@@ -21,5 +21,8 @@ In our workshop, We use interactive mode by running `./flow.tcl -interactive`
 
 ![](Day1/openlane_invoke.png)
 
+![](Day1/prep_design.png)
+
+
 
 # Day 2 
