@@ -45,11 +45,15 @@ The following results are optained.
 ![](Day1/synthesis_result2.png)
 
 Chip area = 147792.9184
+
 Number of cells = 14876
+
 Number of flops = 1613
+
 Then,  $$ Flop count = {{Number of cells} /over {Number of flops}} = 0.1084 $$
 
 Buffer count = 1656+8 = 1662
+
 Then, Buffer ratio = 
 
 
