@@ -59,12 +59,97 @@ Then, Buffer ratio =
 
 
 
+# Day 2 Floorplan and Introduction to library cell
+
+## Floorplan using OpenLANE
+
+![](Day2/floorplan_setup.png)
+
+![](Day2/floorplan_conf.png) ![](Day2/conf_tcl.png)
+
+![](Day2/sky130_conf_tcl.png)
+
+The following command is used run Floorplan in OpenLANE:
+```
+run_floorplan
+```
+![](Day2/run_floorplan.png)
+
+![](Day2/run_floorplan_success.png)
+
+After running floorplan, we obtain picorv32a.floorplan.def file in results/floorplan directory.
+
+![](Day2/run_floorplan_success.png)
+
+### Floorplan Layout in Magic
+
+![](Day2/floorplan_magic_cmd.png)
+
+![](Day2/floorplan_magic_layout.png)
+
+![](Day2/floorplan_magic_layout_2.png) ![](Day2/floorplan_magic_layout_3.png)
 
 
-# Day 2 
+
+
+
+## Placement
+
+## Placement using OpenLANE
+
+
+![](Day2/placement_setup.png)
+
+
+
+```
+run_placement
+```
+![](Day2/placement_run.png)
+
+### Placement Layout in Magic
+
+![](Day2/run_floorplan_success.png)
+![](Day2/run_floorplan_success.png)
+
+
+
+
+
+
+
+
+
+
 
 # Day 3
 
 # Day 4
 
 # Day 5
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
