@@ -6,8 +6,12 @@ This repository contains all the steps performed in 5-day Advanced-Physica-Desig
 
 # Day 1 - Exploring Open-source Tools, OpenLANE Flow and Sky130 Pdk
 
-## Open Cource PDK structure
+## Open source PDK structure
 
 ![](Day1/pdk_dir_structure.png)
+
+## Initalizing OpenLANE
+
+'docker'
 
 # Day 2 
