@@ -122,7 +122,6 @@ run_placement
 
 `set ::env(FP_IO_MODE) 2`
 
-Solarized dark             |  Solarized Ocean
 :-------------------------:|:-------------------------:
 ![](Day2/placement_FPIOMODE_2.png)  |  ![](Day2/placement_FPIOMODE_2_2.png)
 
@@ -160,7 +159,10 @@ To view the inverter layout in Magic, we first copied the sky130A.tech file to o
 
 `ext2spice 
  ext2spice cthresh 0 rthresh 0`
- ![](Day3/spice_extraction.png)
+ 
+ Spice extraction          |  Inverter scale
+:-------------------------:|:-------------------------:
+ ![](Day3/spice_extraction.png) ![](Day3/box_inv.png)
  
 ![](Day3/vim_ngspice.png)
 ![](Day3/vim_ngspice_2.png)
@@ -180,6 +182,7 @@ The waveform shows the inpput and output of inverter w.r.t. time. We can calcula
 
 ![](Day3/plot_y_vs_time_a.png)
 
+The following timing values are obtained from the plot at different values of input and output.
 
 ![](Day3/timing_values.png)
 
