@@ -34,7 +34,7 @@ The technology LEF and cell LEF files are merged  to obtain a merged.lef file du
 
 We perform RTL synthesis of our prepared design(picorv32a) by using the following command:
 ```
-$ run_sunthesis`
+run_sunthesis
 ```
 
 ![](Day1/synthesis.png)
@@ -50,11 +50,11 @@ Number of cells = 14876
 
 Number of flops = 1613
 
-Then,  $ Flop count = Number of cells /over Number of flops = 0.1084 $
+Then, Flop count = Number of cells /over Number of flops = 0.1084 
 
 Buffer count = 1656+8 = 1662
 
-Then, Buffer ratio = 
+Then, Buffer ratio = Buffer count/ Number of cell = 1662/14876 = 
 
 
 
