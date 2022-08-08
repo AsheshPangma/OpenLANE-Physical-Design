@@ -223,13 +223,29 @@ By using the following command we obtain the grid when viewing layout in Magic.
 
 ![](Day4/placement_inv_2.png)
 
-
+![](Day4/run_cts_prep.png)
 
 ```
 run_cts
 ```
 
+![](Day4/run_cts.png)
+
 A file *picorv32a.synthesis_cts.v* is created in the results/synthesis directory
+
+
+![](Day4/presta.png)
+
+![](Day4/mybase.png)
+
+![](Day4/slack.png)
+
+![](Day4/net_replace.png)
+
+![](Day4/net_replace_2.png)
+
+![](Day4/net_replace_3.png)
+
 
 
 # Day 5
