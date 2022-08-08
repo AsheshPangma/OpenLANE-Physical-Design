@@ -163,7 +163,7 @@ To view the inverter layout in Magic, we first copied the sky130A.tech file to o
  
  Spice extraction             |  Inverter scale
 :----------------------------:|:-------------------------:
-![](Day3/spice_extraction.png)  !  [](Day3/box_inv.png)
+![](Day3/spice_extraction.png)  |  ![](Day3/box_inv.png)
  
 ![](Day3/vim_ngspice.png)
 ![](Day3/vim_ngspice_2.png)
