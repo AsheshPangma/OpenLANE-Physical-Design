@@ -121,7 +121,8 @@ run_placement
 
 
 `set ::env(FP_IO_MODE) 2`
-                           |
+
+Placement layout with IO mode 2 |  Zoomed in figure
 :-------------------------:|:-------------------------:
 ![](Day2/placement_FPIOMODE_2.png)  |  ![](Day2/placement_FPIOMODE_2_2.png)
 
