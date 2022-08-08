@@ -75,8 +75,6 @@ run_floorplan
 ```
 ![](Day2/run_floorplan.png)
 
-![](Day2/run_floorplan_success.png)
-
 After running floorplan, we obtain picorv32a.floorplan.def file in results/floorplan directory.
 
 ![](Day2/run_floorplan_success.png)
@@ -109,7 +107,6 @@ run_placement
 
 ### Placement Layout in Magic
 
-![](Day2/run_floorplan_success.png)
 ![](Day2/run_floorplan_success.png)
 
 
