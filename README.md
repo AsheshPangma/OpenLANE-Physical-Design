@@ -65,7 +65,9 @@ Then, Buffer ratio = Buffer count/ Number of cell = 1662/14876 =
 
 ![](Day2/floorplan_setup.png)
 
-![](Day2/floorplan_conf.png) ![](Day2/conf_tcl.png)
+![](Day2/floorplan_conf.png) 
+
+![](Day2/conf_tcl.png)
 
 ![](Day2/sky130_conf_tcl.png)
 
@@ -85,7 +87,9 @@ After running floorplan, we obtain picorv32a.floorplan.def file in results/floor
 
 ![](Day2/floorplan_magic_layout.png)
 
-![](Day2/floorplan_magic_layout_2.png) ![](Day2/floorplan_magic_layout_3.png)
+![](Day2/floorplan_magic_layout_2.png)
+
+![](Day2/floorplan_magic_layout_3.png)
 
 
 
@@ -120,6 +124,8 @@ run_placement
 
 
 # Day 3
+
+
 
 # Day 4
 
