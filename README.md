@@ -42,6 +42,7 @@ run_sunthesis
 The following results are optained.
 
 ![](Day1/synthesis_result.png)
+
 ![](Day1/synthesis_result2.png)
 
 Chip area = 147792.9184
@@ -158,14 +159,15 @@ To view the inverter layout in Magic, we first copied the sky130A.tech file to o
 `extract all`
 
 
-`ext2spice 
- ext2spice cthresh 0 rthresh 0`
+`ext2spice cthresh 0 rthresh 0
+ ext2spice`
  
  Spice extraction             |  Inverter scale
 :----------------------------:|:-------------------------:
 ![](Day3/spice_extraction.png)  |  ![](Day3/box_inv.png)
  
 ![](Day3/vim_ngspice.png)
+
 ![](Day3/vim_ngspice_2.png)
 
 `vim sky130_inv.spice`
@@ -187,9 +189,48 @@ The following timing values are obtained from the plot at different values of in
 
 ![](Day3/timing_values.png)
 
-# Day 4
+# Day 4 Pre-Layout Timing Analysis and Importance of Good Clock Tree
+
+
+
+```
+<layer-name> <X-or-Y> <track-offset> <track-pitch>
+```
+
+![](Day4/track.png)
+
+By using the following command we obtain the grid when viewing layout in Magic.
+`grid 0.46um 0.34um 0.23um 0.17um`
+
+ Spice extraction             |  Inverter scale
+:----------------------------:|:-------------------------:
+![](Day4/inv_grid)  |  ![](Day4/inv_grid_2.png)
+
+![](Day4/inv_mag.png)
+
+![](Day4/mag_lef.png)
+
+ Spice extraction             |  Inverter scale
+:----------------------------:|:-------------------------:
+![](Day4/inf0_area)  |  ![](Day4/info_cell.png)
+
+![](Day4/merged_lef.png)
+
+
+
+```
+run_cts
+```
+
+A file *picorv32a.synthesis_cts.v* is created in the results/synthesis directory
+
 
 # Day 5
+
+
+
+
+
 
 # Day 6
 
