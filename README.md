@@ -23,6 +23,7 @@ After invoking openLANE, we import package required for openLANE of the required
 
 The next step is to prepare our design for OpenLANE flow. The following command is used :
 `prep -design picorv32a`
+
 ![](Day1/prep_design.png)
 
 
