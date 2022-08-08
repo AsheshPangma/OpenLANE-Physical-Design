@@ -21,11 +21,33 @@ In our workshop, We use interactive mode by running `./flow.tcl -interactive`
 After invoking openLANE, we import package required for openLANE of the required version. We use version 0.9.
 ![](Day1/openlane_invoke.png)
 
-The next step is to prepare our design for OpenLANE flow. The following command is used :
+The next step is to prepare our design for OpenLANE flow. We use *picorv32a* in this workshop. Thus, the following command is:
 `prep -design picorv32a`
 
 ![](Day1/prep_design.png)
 
+The technology LEF and cell LEF files are merged  to obtain a merged.lef file during design preparation stage. The LEF files holds various informations of the design such as layer informations, design rules and also information regarding each standard cells necessary for place and route.
+
+![](Day1/merged.png)
+
+## Design synthesis 
+
+We perform RTL synthesis of our prepared design(picorv32a) by using the following command:
+`run_sunthesis`
+![](Day1/synthesis.png)
+
+The following results are optained.
+
+![](Day1/synthesis_result.png)
+![](Day1/synthesis_result2png)
+
+
 
 
 # Day 2 
+
+# Day 3
+
+# Day 4
+
+# Day 5
