@@ -144,6 +144,8 @@ At first, we clone the standart inverter cell from repository provided in github
 
 # Day 5
 
+# Day 6
+
 
 
 
