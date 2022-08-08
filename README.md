@@ -266,6 +266,8 @@ A file *picorv32a.synthesis_cts.v* is created in the results/synthesis directory
 ![](Day4/openroad_9.png)
 
 
+![](Day4/slack_last.png)
+
 
 # Day 5
 
@@ -274,7 +276,7 @@ A file *picorv32a.synthesis_cts.v* is created in the results/synthesis directory
 
 
 
-# Day 6
+
 
 
 
