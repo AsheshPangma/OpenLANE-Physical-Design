@@ -33,7 +33,9 @@ The technology LEF and cell LEF files are merged  to obtain a merged.lef file du
 ## Design synthesis 
 
 We perform RTL synthesis of our prepared design(picorv32a) by using the following command:
-`run_sunthesis`
+```
+$ run_sunthesis`
+```
 
 ![](Day1/synthesis.png)
 
@@ -41,6 +43,14 @@ The following results are optained.
 
 ![](Day1/synthesis_result.png)
 ![](Day1/synthesis_result2.png)
+
+Chip area = 147792.9184
+Number of cells = 14876
+Number of flops = 1613
+Then,  $$ Flop count = {Number of cells /over Number of flops} = 0.1084 $$
+
+Buffer count = 1656+8 = 1662
+Then, Buffer ratio = 
 
 
 
