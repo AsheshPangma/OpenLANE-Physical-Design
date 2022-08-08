@@ -11,7 +11,7 @@ This repository contains all the steps performed in 5-day Advanced-Physica-Desig
 ![](Day1/pdk_dir_structure.png)
 
 ## Initalizing OpenLANE
-
+In Linux Ubuntu, to invoke OpenLANE, we should run docker. In our case, we invoke OpenLANE in openlane directory. The script is as follows:
 `docker`
 
 # Day 2 
