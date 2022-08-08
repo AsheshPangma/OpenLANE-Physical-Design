@@ -18,10 +18,11 @@ There are two modes of operation for OpenLANE: interactive and autonomous.
 To invoke openLANE run `./flow.tcl`.
 In our workshop, We use interactive mode by running `./flow.tcl -interactive`
 
-
-
+After invoking openLANE, we import package required for openLANE of the required version. We use version 0.9.
 ![](Day1/openlane_invoke.png)
 
+The next step is to prepare our design for OpenLANE flow. The following command is used :
+`prep -design picorv32a`
 ![](Day1/prep_design.png)
 
 
