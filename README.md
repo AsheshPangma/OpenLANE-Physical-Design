@@ -34,12 +34,15 @@ The technology LEF and cell LEF files are merged  to obtain a merged.lef file du
 
 We perform RTL synthesis of our prepared design(picorv32a) by using the following command:
 `run_sunthesis`
+
 ![](Day1/synthesis.png)
 
 The following results are optained.
 
 ![](Day1/synthesis_result.png)
-![](Day1/synthesis_result2png)
+![](Day1/synthesis_result2.png)
+
+
 
 
 
