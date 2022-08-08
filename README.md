@@ -121,7 +121,7 @@ run_placement
 
 
 `set ::env(FP_IO_MODE) 2`
-
+                           |
 :-------------------------:|:-------------------------:
 ![](Day2/placement_FPIOMODE_2.png)  |  ![](Day2/placement_FPIOMODE_2_2.png)
 
