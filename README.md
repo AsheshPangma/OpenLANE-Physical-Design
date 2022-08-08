@@ -113,8 +113,6 @@ run_placement
 
 ![](Day2/placement_magic_cmd.png)
 
-![](Day2/placement_magic_cmd.png)
-
 ![](Day2/placement_layout_magic.png)
 
 ![](Day2/placement_layout_magic_2.png)
