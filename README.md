@@ -122,6 +122,10 @@ run_placement
 
 `set ::env(FP_IO_MODE) 2`
 
+Solarized dark             |  Solarized Ocean
+:-------------------------:|:-------------------------:
+![](Day2/placement_FPIOMODE_2.png)  |  ![](Day2/placement_FPIOMODE_2_2.png)
+
 
 
 
@@ -139,6 +143,45 @@ At first, we clone the standart inverter cell from repository provided in github
 `git clone https://github.com/nickson-jose/vsdstdcelldesign.git`
 
 
+## CMOS inverter using Magic
+
+To view the inverter layout in Magic, we first copied the sky130A.tech file to our vsdstdcelldesign directory. Then, the following script is used to view the inverter layout.
+
+`magic -T Sky130A.tech sky130_inv.mg &`
+
+![](Day3/magic_inv_cmd.png)
+
+![](Day3/inv_layout.png)
+
+### Extractiong SPICE netlist from standard cell layout
+
+`extract all`
+
+
+`ext2spice 
+ ext2spice cthresh 0 rthresh 0`
+ ![](Day3/spice_extraction.png)
+ 
+![](Day3/vim_ngspice.png)
+![](Day3/vim_ngspice_2.png)
+
+`vim sky130_inv.spice`
+
+### Transient analysis using NGSPICE
+
+`ngspice sky130_inv.spice`
+
+`ngspice 1 -> plot y vs time a`
+
+![](Day3/ngspice_invoke_2.png)
+
+
+The waveform shows the inpput and output of inverter w.r.t. time. We can calculate various timing parameters such as rise time delay, fall time delay and propagation delay of the inverter.
+
+![](Day3/plot_y_vs_time_a.png)
+
+
+![](Day3/timing_values.png)
 
 # Day 4
 
