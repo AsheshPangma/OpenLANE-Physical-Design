@@ -212,9 +212,16 @@ By using the following command we obtain the grid when viewing layout in Magic.
 
  Spice extraction             |  Inverter scale
 :----------------------------:|:-------------------------:
-![](Day4/info_area.png)           |  ![](Day4/info_cell.png)
+![](Day4/info_area.png)       |  ![](Day4/info_cell.png)
 
-![](Day4/merged_lef.png)
+ Spice extraction             |  Inverter scale
+:----------------------------:|:-------------------------:
+![](Day4/merged_lef.png)      |  ![](Day4/placement_inv.png)
+
+
+
+
+![](Day4/placement_inv_2.png)
 
 
 
