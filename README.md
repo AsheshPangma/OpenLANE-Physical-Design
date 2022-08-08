@@ -119,9 +119,8 @@ run_placement
 
 ![](Day2/placement_magic_layout_3.png)
 
-                           | 
-:-------------------------:|:-------------------------:
-![](Day2/placement_magic_layout_2.png)  |  ![](Day2/placement_magic_layout_3.png)
+
+`set ::env(FP_IO_MODE) 2`
 
 
 
@@ -133,9 +132,11 @@ run_placement
 
 
 
+# Day 3 Design Library Cell using Magic Layout and ngspice characterization
 
+At first, we clone the standart inverter cell from repository provided in github to our openlane folder. The command is given below:
 
-# Day 3
+`git clone https://github.com/nickson-jose/vsdstdcelldesign.git`
 
 
 
