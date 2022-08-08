@@ -55,7 +55,7 @@ Then, Flop count = Number of cells /over Number of flops = 0.1084
 
 Buffer count = 1656+8 = 1662
 
-Then, Buffer ratio = Buffer count/ Number of cell = 1662/14876 = 
+Then, Buffer ratio = Buffer count/ Number of cell = 1662/14876 = 0.1117
 
 
 
@@ -245,6 +245,25 @@ A file *picorv32a.synthesis_cts.v* is created in the results/synthesis directory
 ![](Day4/net_replace_2.png)
 
 ![](Day4/net_replace_3.png)
+
+
+![](Day4/openroad_1.png)
+
+![](Day4/openroad_2.png)
+
+![](Day4/openroad_3.png)
+
+![](Day4/openroad_4.png)
+
+![](Day4/openroad_5.png)
+
+![](Day4/openroad_6.png)
+
+![](Day4/openroad_7.png)
+
+![](Day4/openroad_8.png)
+
+![](Day4/openroad_9.png)
 
 
 
