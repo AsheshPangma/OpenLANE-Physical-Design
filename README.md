@@ -269,7 +269,20 @@ A file *picorv32a.synthesis_cts.v* is created in the results/synthesis directory
 ![](Day4/slack_last.png)
 
 
-# Day 5
+# Day 5  Final steps for RTL2GDS
+
+## Generation of Power Distribution network
+
+```
+gen_pdn
+```
+
+
+```
+run_routing
+```
+
+
 
 
 
