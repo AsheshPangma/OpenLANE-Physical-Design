@@ -111,7 +111,17 @@ run_placement
 
 ### Placement Layout in Magic
 
-![](Day2/run_floorplan_success.png)
+![](Day2/placement_magic_cmd.png)
+
+![](Day2/placement_magic_cmd.png)
+
+![](Day2/placement_layout_magic.png)
+
+![](Day2/placement_layout_magic_2.png)
+
+![](Day2/placement_layout_magic_3.png)
+
+
 
 
 
