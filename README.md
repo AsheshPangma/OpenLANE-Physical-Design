@@ -11,7 +11,15 @@ This repository contains all the steps performed in 5-day Advanced-Physica-Desig
 ![](Day1/pdk_dir_structure.png)
 
 ## Initalizing OpenLANE
-In Linux Ubuntu, to invoke OpenLANE, we should run docker. In our case, we invoke OpenLANE in openlane directory. The script is as follows:
+In Linux Ubuntu, to invoke OpenLANE, we should first run docker everytime. In our case, we invoke OpenLANE in openlane directory. The script is as follow:
 `docker`
+There are two modes of operation for OpenLANE: interactive and autonomous.
+To invoke openLANE run `./flow.tcl`.
+In our workshop, We use interactive mode by running `./flow.tcl -interactive`
+
+
+
+![](Day1/openlane_invoke.png)
+
 
 # Day 2 
