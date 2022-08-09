@@ -400,11 +400,11 @@ run_cts
 ![](Day4/run_cts.png)
 
 A file *picorv32a.synthesis_cts.v* is created in the results/synthesis directory. This file includes original netlist with clock buffers.
-Now, we perform timing analysis. First, open OpenROAD as OpenSTA is integrated into it. This has a benefit that we can access various environmental variables. Then, first 
+Now, we perform timing analysis. First, open OpenROAD as OpenSTA is integrated into it. This has a benefit that we can access various environmental variables. 
 
 ![](Day4/openroad_1.png)
 
-Read *LEF* and *DEF* files as shown in the figure below.
+Then first, read *LEF* and *DEF* files as shown in the figure below.
 ![](Day4/openroad_2.png)
 
 Then, create and read *DB* . After this, read verilog file .i.e. picorv32a.synthesis_cts.v. Then, read liberty both min and max library. These steps are shown in the following figure.  
