@@ -15,16 +15,19 @@ This repository contains all the steps performed in 5-day Advanced-Physica-Desig
   * [Placement](#placement)
   * [Placement using OpenLANE](#placement-using-openlane)
   * [Placement Layout in Magic](#placement-layout-in-magic)
-- [Day 3 Design Library Cell using Magic Layout and ngspice characterization](#day-3-design-library-cell-using-magic-layout-and-ngspice-characterization)
-  * [CMOS inverter using Magic](#cmos-inverter-using-magic)
-  * [Extracting SPICE netlist from standard cell layout](#extracting-spice-netlist-from-standard-cell-layout)
-  * [Transient analysis using NGSPICE](#transient-analysis-using-ngspice)
+- [Day 3 Library Cell Design in Magic Layout and Ngspice characterization](#day-3-library-cell-design-in-magic-layout-and-ngspice-characterization)
+  * [Magic to View CMOS Inverter Layout](#magic-to-view-cmos-inverter-layout)
+  * [SPICE netlist extraction from standard cell layout](#spice-netlist-extraction-from-standard-cell-layout)
+  * [NGSPICE for Transient Analysis](#ngspice-for-transient-analysis)
 - [Day 4 Pre-Layout Timing Analysis and Importance of Good Clock Tree](#day-4-pre-layout-timing-analysis-and-importance-of-good-clock-tree)
   * [Magic Layout to Standard Cell LEF](#magic-layout-to-standard-cell-lef)
-  * [Timing Analysis using OpenSTA](#timing-analysis-using-opensta)
-  * [Clock Tree Synthesis using TritonCTS](#clock-tree-synthesis-using-tritoncts)
+  * [OpenSTA for Timing Analysis](#opensta-for-timing-analysis)
+  * [TritonCTS for Clock Tree Synthesis](#tritoncts-for-clock-tree-synthesis)
 - [Day 5  Final steps for RTL2GDS](#day-5--final-steps-for-rtl2gds)
   * [Generation of Power Distribution network](#generation-of-power-distribution-network)
+  * [Generating SPEF file](#generating-spef-file)
+- [References](#references)
+- [Acknowledgement](#acknowledgement)
 
 # Day 1 - Exploring Open-source Tools, OpenLANE Flow and Sky130 Pdk
 
@@ -161,14 +164,14 @@ Placement layout with FP_IO_MODE 2 |  Zoomed in figure
 
 
 
-# Day 3 Design Library Cell using Magic Layout and ngspice characterization
+# Day 3 Library Cell Design in Magic Layout and Ngspice characterization
 
 At first, we clone the standart inverter cell from repository provided in github to our openlane folder. The command is given below:
 
 `git clone https://github.com/nickson-jose/vsdstdcelldesign.git`
 
 
-## CMOS inverter using Magic
+## Magic to View CMOS Inverter Layout
 
 To view the inverter layout in Magic, we first copied the sky130A.tech file to our vsdstdcelldesign directory. Then, the following script is used to view the inverter layout.
 
@@ -196,7 +199,7 @@ To view the inverter layout in Magic, we first copied the sky130A.tech file to o
 
 `vim sky130_inv.spice`
 
-### Transient analysis using NGSPICE
+### NGSPICE for Transient Analysis
 
 `ngspice sky130_inv.spice`
 
@@ -253,7 +256,7 @@ By using the following command we obtain the grid when viewing layout in Magic.
 
 
 
-## Timing Analysis using OpenSTA
+## OpenSTA for Timing Analysis
 
 ![](Day4/presta.png)
 
@@ -267,7 +270,7 @@ By using the following command we obtain the grid when viewing layout in Magic.
 
 ![](Day4/net_replace_3.png)
 
-## Clock Tree Synthesis using TritonCTS
+## TritonCTS for Clock Tree Synthesis
 
 ![](Day4/run_cts_prep.png)
 
@@ -327,12 +330,13 @@ run_routing
 ![](Day5/routed_inv_cell.png)
 
 
+## Generating SPEF file
+
 ![](Day5/write_spef.png)
 
 
 # References
 
-* RISC-V: https://riscv.org/
 * VLSI System Design: https://www.vlsisystemdesign.com/
 * OpenLANE: https://github.com/The-OpenROAD-Project/OpenLane
 
