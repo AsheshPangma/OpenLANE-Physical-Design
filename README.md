@@ -345,7 +345,9 @@ We can obtain various timing information using OpenSTA tool such as hold time, s
 
 ![](Day4/slack.png)
 
-The figure below shows, net with higher delay is selected and replaced with buffer of larger size. This might improve slack value or make it worse. Replacing cells with larger buffer will increase the cell area.
+The figure below shows, net with higher delay is selected and replaced with buffer of larger size. This might improve slack value or make it worse. Replacing cells with larger buffer will increase the cell area. We also set the maximum fanout to 4 by using the command below:
+
+`set ::env(SYNTH_MAX_FANOUT) 4`
 
 ![](Day4/net_replace.png)
 
@@ -355,11 +357,34 @@ Here, we see that the slack is improved from -3.68 to -3.1987.
 
 ![](Day4/net_replace_3.png)
 
+After improving the slack, we write the modified netlist to the original netlist. This is done using the following command:
+
+`write_verilog <filename>`
+
+In my case, the command is:
+
+`write_verilog /home/asheshpangma1/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/06-08_13-48/results/synthesis/picorv32a.synthesis.v`
+
+Then we run floorplan and placement with the new modified netlist. 
+
+`init_floorplan`
+
+`place_io`
+
+`global_placement_or`
+
+`detailed_placement`
+
+During placement, the value of OVFL(Overflow) decreases indicating that the design is converging. The next step is CTS(Clock Tree Synthesis).
+
+
+
 ## TritonCTS for Clock Tree Synthesis
 
-TritonCTS is a tool provided for CTS in OpenLANE. CTS is performed to ensure that the clock is distributed evenly to all the sequential elements in a design with minimum clock latency and skew. Some of CTS techniques are H-Tree, X-Tree, Fish bone, etc. CTS is done after floorplan and placement and is performed on a `placement.def` file that is created during placement stage.
+TritonCTS is a tool provided for CTS in OpenLANE. CTS is performed to ensure that the clock is distributed evenly to all the sequential elements in a design with minimum clock latency and skew. Some of CTS techniques are H-Tree, X-Tree, Fish bone, etc. CTS is done after floorplan and placement and is performed on `placement.def` file that is created during placement stage.
 
 ![](Day4/run_cts_prep.png)
+
 
 The following command is used for Clock Tree Synthesis in OpenLANE:
 
