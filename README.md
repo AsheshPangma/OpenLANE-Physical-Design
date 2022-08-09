@@ -340,13 +340,17 @@ We need to configure specific verilog file, constriants, clock period and other 
 
 ![](Day4/mybase.png)
 
-We can obtain various timing information using OpenSTA tool such as hold time, setup time, total negative slack and worst negative slack. We obtain the following information by invoking OpenSTA using the command specified above.
+We can obtain various timing information using OpenSTA tool such as hold time, setup time, total negative slack and worst negative slack. We obtain the following information by invoking OpenSTA using the command specified above. The figure shows negative setup slack which violates our design. We try to improve the slack by replacing nets with higher delays and fanout. 
 
 ![](Day4/slack.png)
+
+The figure below shows, net with higher delay is selected and replaced with buffer of larger size. This might improve slack value or make it worse. Replacing cells with larger buffer will increase the cell area.
 
 ![](Day4/net_replace.png)
 
 ![](Day4/net_replace_2.png)
+
+Here, we see that the slack is improved from -3.68 to -3.1987.
 
 ![](Day4/net_replace_3.png)
 
