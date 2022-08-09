@@ -277,12 +277,22 @@ A file *picorv32a.synthesis_cts.v* is created in the results/synthesis directory
 gen_pdn
 ```
 
+![](Day5/gen_pdn_1.png)
+
+![](Day5/gen_pdn_2.png)
+
 
 ```
 run_routing
 ```
 
+![](Day5/run_routing.png)
 
+
+![](Day5/routed_inv_cell.png)
+
+
+![](Day5/write_spef.png)
 
 
 
