@@ -279,7 +279,11 @@ By using the following command we obtain the grid when viewing layout in Magic.
 
 ## TritonCTS for Clock Tree Synthesis
 
+TritonCTS is a tool provided for CTS in OpenLANE. CTS is performed to ensure that the clock is distributed evenly to all the sequential elements in a design with minimum clock latency and skew. Some of CTS techniques are H-Tree, X-Tree, Fish bone, etc. CTS is done after floorplan and placement and is performed on a `placement.def` file that is created during placement stage.
+
 ![](Day4/run_cts_prep.png)
+
+The following command is used for Clock Tree Synthesis in OpenLANE:
 
 ```
 run_cts
@@ -344,6 +348,8 @@ run_routing
 
 
 ![](Day5/routed_inv_cell.png)
+
+If we have any DRC violations after routing, then it should be corrected manyally.
 
 
 ## Generating SPEF file
