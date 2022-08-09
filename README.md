@@ -9,6 +9,7 @@ This repository contains all the steps performed in 5-day Advanced-Physica-Desig
   * [Initalizing OpenLANE](#initalizing-openlane)
   * [Design synthesis](#design-synthesis)
 - [Day 2 Floorplan and Introduction to library cell](#day-2-floorplan-and-introduction-to-library-cell)
+  * [Floorplan](#floorplan)
   * [Floorplan using OpenLANE](#floorplan-using-openlane)
   * [Floorplan Layout in Magic](#floorplan-layout-in-magic)
   * [Placement](#placement)
@@ -19,6 +20,9 @@ This repository contains all the steps performed in 5-day Advanced-Physica-Desig
   * [Extracting SPICE netlist from standard cell layout](#extracting-spice-netlist-from-standard-cell-layout)
   * [Transient analysis using NGSPICE](#transient-analysis-using-ngspice)
 - [Day 4 Pre-Layout Timing Analysis and Importance of Good Clock Tree](#day-4-pre-layout-timing-analysis-and-importance-of-good-clock-tree)
+  * [Magic Layout to Standard Cell LEF](#magic-layout-to-standard-cell-lef)
+  * [Timing Analysis using OpenSTA](#timing-analysis-using-opensta)
+  * [Clock Tree Synthesis using TritonCTS](#clock-tree-synthesis-using-tritoncts)
 - [Day 5  Final steps for RTL2GDS](#day-5--final-steps-for-rtl2gds)
   * [Generation of Power Distribution network](#generation-of-power-distribution-network)
 
@@ -79,6 +83,8 @@ Then, Buffer ratio = Buffer count/ Number of cell = 1662/14876 = 0.1117
 
 
 # Day 2 Floorplan and Introduction to library cell
+
+## Floorplan
 
 ## Floorplan using OpenLANE
 
@@ -207,7 +213,13 @@ The following timing values are obtained from the plot at different values of in
 
 ![](Day3/timing_values.png)
 
+
+
+
+
 # Day 4 Pre-Layout Timing Analysis and Importance of Good Clock Tree
+
+## Magic Layout to Standard Cell LEF
 
 ```
 <layer-name> <X-or-Y> <track-offset> <track-pitch>
@@ -239,16 +251,9 @@ By using the following command we obtain the grid when viewing layout in Magic.
 
 ![](Day4/placement_inv_2.png)
 
-![](Day4/run_cts_prep.png)
 
-```
-run_cts
-```
 
-![](Day4/run_cts.png)
-
-A file *picorv32a.synthesis_cts.v* is created in the results/synthesis directory
-
+## Timing Analysis using OpenSTA
 
 ![](Day4/presta.png)
 
@@ -261,6 +266,20 @@ A file *picorv32a.synthesis_cts.v* is created in the results/synthesis directory
 ![](Day4/net_replace_2.png)
 
 ![](Day4/net_replace_3.png)
+
+## Clock Tree Synthesis using TritonCTS
+
+![](Day4/run_cts_prep.png)
+
+```
+run_cts
+```
+
+![](Day4/run_cts.png)
+
+A file *picorv32a.synthesis_cts.v* is created in the results/synthesis directory
+
+
 
 
 ![](Day4/openroad_1.png)
@@ -311,6 +330,17 @@ run_routing
 ![](Day5/write_spef.png)
 
 
+# References
+
+* RISC-V: https://riscv.org/
+* VLSI System Design: https://www.vlsisystemdesign.com/
+* OpenLANE: https://github.com/The-OpenROAD-Project/OpenLane
+
+# Acknowledgement
+
+* Kunal Ghosh, Co-founder, VSD Corp. Pvt. Ltd.
+* Nickson Jose, Instructor.
+* Mukesh Nadar, Platform engineer.
 
 
 
