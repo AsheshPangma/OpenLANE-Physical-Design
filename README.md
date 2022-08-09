@@ -231,20 +231,40 @@ The following timing values are obtained from the plot at different values of in
 
 ## Magic Layout to Standard Cell LEF
 
+LEF stands for Library Exchange Format. It holds the information such as input ports, output ports, power and ground rails of cell. We extract LEF file from MAG file of the inverter and plug it into *picorv32a RISC V* core. 
+
+`Tracks.info` provides information about the offset and pitch of a track in given layer both in horizontal and vertical direction. The Track information is given in below mentioned format:
+
 ```
 <layer-name> <X-or-Y> <track-offset> <track-pitch>
 ```
 
 ![](Day4/track.png)
 
-By using the following command we obtain the grid when viewing layout in Magic.
+Some aspect to remember while generating standard cell LEF are:
+ 1. The input and the output ports must lie in the intersection of vertical and horizontal tracks.
+ 2. The width of the standard cell must be in the odd multiple of track horizontal pitch and the height in track vertical pitch.
+ 3. Appropriate height should be maintained so that the VPWR and VGND fall on the power distribution network.
+
+By using the following command in *tkcon window* we obtain the grid when viewing layout in Magic.
+
 `grid 0.46um 0.34um 0.23um 0.17um`
 
- Spice extraction             |  Inverter scale
+ Inverter layout with grid    | zoomed in Inverter layout
 :----------------------------:|:-------------------------:
 ![](Day4/inv_grid.png)            |  ![](Day4/inv_grid_2.png)
 
+Then, use the following command to create a *sky130_vsdinv.mag* file:
+
+`save sky130_vsdinv.mag`
+
 ![](Day4/inv_mag.png)
+
+Now, open magic with the above given *sky130_vsdinv.mag* file and create *LEF* file by using the command below:
+
+'lef write'
+
+This creates a *LEF* file with the same name as the *MAG* file. This is shown by the figure below.
 
 ![](Day4/mag_lef.png)
 
