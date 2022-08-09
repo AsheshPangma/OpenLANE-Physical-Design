@@ -268,11 +268,35 @@ This creates a *LEF* file with the same name as the *MAG* file. This is shown by
 
 ![](Day4/mag_lef.png)
 
+The `conf.tcl` is edited to include typical library, fast library and slow library and the *LEF* file of inverter. These library files are used in STA analysis.
+
 ![](Day4/conf_tcl_4.png)
 
+After all these steps, We invoke `docker` and perform synthesis. The steps follows:
 
+`docker`
 
- Area information           |  Cell information
+`./flow.tcl`
+
+`package require openlane 0.9`
+
+`prep -design picorv32a <run-session>`
+
+After preparing our design, we use the following command to ensure that OpenLANE flow takes our *LEF* file.
+
+`set lefs [glob $::env(DESIGN_DIR)/src/*.lef]`
+
+`add_lefs -src $lefs`
+
+![](Day4/merged_lef_info.png)
+
+Then, we perform synthesis using the following command:
+
+`run_synthesis`
+
+This should put our custom inverter in our *PICORV32a* design. 
+
+ Area Information with sky130_vsdinv instances           |  Cell information
 :----------------------------:|:-------------------------:
 ![](Day4/info_area.png)       |  ![](Day4/info_cell.png)
 
@@ -280,9 +304,6 @@ This creates a *LEF* file with the same name as the *MAG* file. This is shown by
  Merged.lef File with Inverter            |  Placement with Inverter
 :----------------------------:|:-------------------------:
 ![](Day4/merged_lef.png)      |  ![](Day4/placement_inv.png)
-
-
-
 
 ![](Day4/placement_inv_2.png)
 
