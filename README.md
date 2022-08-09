@@ -1,6 +1,6 @@
 # Advanced-Physica-Design-using-openLANE/Sky130
 
-This repository contains all the steps performed in 5-day Advanced-Physica-Design-using-openLANE/Sky130 workshop. This workshop is focused in complete RTL2GDS flow using openLANE flow which is open source flow.
+This repository contains all the steps performed in 5-day Advanced-Physica-Design-using-openLANE/Sky130 workshop. This workshop is focused in complete RTL2GDS flow using openLANE flow which is open source flow. In this workshop, PICORV32A RISC V core design is used.
 
 # Table of Contents
 
@@ -37,16 +37,23 @@ This repository contains all the steps performed in 5-day Advanced-Physica-Desig
 
 ## Initalizing OpenLANE
 In Linux Ubuntu, to invoke OpenLANE, we should first run docker everytime. In our case, we invoke OpenLANE in openlane directory. The script is as follow:
+
 `docker`
 
 There are two modes of operation for OpenLANE: interactive and autonomous.
-To invoke openLANE run `./flow.tcl`.
-In our workshop, We use interactive mode by running `./flow.tcl -interactive`
+To invoke openLANE run 
+
+`./flow.tcl`.
+
+In our workshop, We use interactive mode by running 
+
+`./flow.tcl -interactive`
 
 After invoking openLANE, we import package required for openLANE of the required version. We use version 0.9.
 ![](Day1/openlane_invoke.png)
 
 The next step is to prepare our design for OpenLANE flow. We use *picorv32a* in this workshop. Thus, the following command is:
+
 `prep -design picorv32a`
 
 ![](Day1/prep_design.png)
@@ -311,6 +318,8 @@ A file *picorv32a.synthesis_cts.v* is created in the results/synthesis directory
 
 ## Generation of Power Distribution network
 
+In OpenLANE flow, we generate PDN only after we perform Clock Tree Synthesis(CTS). Generally, PDN generation is performed before placement. All the tracks and trails required for routing power to entire chip is generated. The following command is used for generating power distribution network:
+
 ```
 gen_pdn
 ```
@@ -319,6 +328,13 @@ gen_pdn
 
 ![](Day5/gen_pdn_2.png)
 
+## TritonRoute for Routing
+
+THe routing process is implemented in two stages.
+ 1. Global Routing - Routing guides are generated for interconnects
+ 2. Detailed Routing - Tracks are generated interactively.
+
+TritonRoute 14 ensures that there are no DRC viloations after routing. This is why it takes almost an hour to complete the routing process. We have used TritonRoute "0" for routing process.
 
 ```
 run_routing
@@ -331,6 +347,12 @@ run_routing
 
 
 ## Generating SPEF file
+
+SPEF stands for Standard Parasitic Exchange Format. It is an IEEE standard for representing parasitic data of wires in a chip design in ASCII format. OpenLANE provides a tool named, SPEF_EXTRACTOR for generating a *SPEF* file. This tool is a *python* based parser. *LEF* and *DEF* files are provided as input to generate a *SPEF* file.
+To invoke SPEF_EXTRACTOR, first move to the directory containing SPEF_EXTRACTOR tool and use the command:
+
+`python3 main.py -l <path-to-LEF-file> -d <path-to-DEF-file-created-after-routing>`
+
 
 ![](Day5/write_spef.png)
 
