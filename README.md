@@ -301,19 +301,46 @@ This should put our custom inverter in our *PICORV32a* design.
 ![](Day4/info_area.png)       |  ![](Day4/info_cell.png)
 
 
+We check and set some of the environment variable to improve slack of our design as shown by following diagram.
+
+![](Day4/setup_day4.png)
+
+Then, we perform synthesis again followed by floorplan and placement. In new version of OpenLANE after STA, floorplan could not be performed by command `run_floorplan`. So, we perform the following commands in order:
+
+`init_floorplan`
+
+`place_io`
+
+`global_placement_or`
+
+`detailed_placement`
+
  Merged.lef File with Inverter            |  Placement with Inverter
 :----------------------------:|:-------------------------:
 ![](Day4/merged_lef.png)      |  ![](Day4/placement_inv.png)
 
+This figure shows the layout of the design in Magic and we can see our custom inverter in the layout.
 ![](Day4/placement_inv_2.png)
+
+
 
 
 
 ## OpenSTA for Timing Analysis
 
+OpenSTA tool is used for Static Timing Analysis(STA) of the design in OpenLANE flow. There are two ways to use this tools.
+ 1. In OpenLANE flow, use command `openroad` to open OpenROAD where OpenSTA can be invoked.
+ 2. Outside OpenLANE flow, invoke OpenSTA by using the command below:
+
+`sta <conf-file-if-required>`
+
+We need to configure specific verilog file, constriants, clock period and other necessary parameters. The figure below shows our configuration file:
+
 ![](Day4/presta.png)
 
 ![](Day4/mybase.png)
+
+We can obtain various timing information using OpenSTA tool such as hold time, setup time, total negative slack and worst negative slack. We obtain the following information by invoking OpenSTA using the command specified above.
 
 ![](Day4/slack.png)
 
