@@ -382,8 +382,13 @@ During placement, the value of OVFL(Overflow) decreases indicating that the desi
 ## TritonCTS for Clock Tree Synthesis
 
 TritonCTS is a tool provided for CTS in OpenLANE. CTS is performed to ensure that the clock is distributed evenly to all the sequential elements in a design with minimum clock latency and skew. Some of CTS techniques are H-Tree, X-Tree, Fish bone, etc. CTS is done after floorplan and placement and is performed on `placement.def` file that is created during placement stage.
+As of now, TritonCTS cannot create optimized clock tree for multi corner and is used for single corner clock tree synthesis. Here, clock tree is generated for typical corner.
 
 ![](Day4/run_cts_prep.png)
+
+![](Day4/cts_default.png)
+
+![](Day4/cts_default_2.png)
 
 
 The following command is used for Clock Tree Synthesis in OpenLANE:
@@ -394,29 +399,42 @@ run_cts
 
 ![](Day4/run_cts.png)
 
-A file *picorv32a.synthesis_cts.v* is created in the results/synthesis directory
-
-
-
+A file *picorv32a.synthesis_cts.v* is created in the results/synthesis directory. This file includes original netlist with clock buffers.
+Now, we perform timing analysis. First, open OpenROAD as OpenSTA is integrated into it. This has a benefit that we can access various environmental variables. Then, first 
 
 ![](Day4/openroad_1.png)
 
+Read *LEF* and *DEF* files as shown in the figure below.
 ![](Day4/openroad_2.png)
 
+Then, create and read *DB* . After this, read verilog file .i.e. picorv32a.synthesis_cts.v. Then, read liberty both min and max library. These steps are shown in the following figure.  
 ![](Day4/openroad_3.png)
 
+Next step is to read *SDC* file and set propagated clocks. Then, we finally check report.
 ![](Day4/openroad_4.png)
 
+The report of the design is shown by the figure below.
 ![](Day4/openroad_5.png)
+
+The setup slack is -4.9653. and hold slack is -1.9322.
+
+The analysis is incorrect as clock tree is generated for typical corner, however we analyse min and max corner. Now, continue the same process except while reading liberty, read typical library shown by the following command:
+
+`read_liberty $::env(LIB_SYNTH_COMPLETE)`
+
+And check the report again. The following diagram shows the correct analysis.
 
 ![](Day4/openroad_6.png)
 
 ![](Day4/openroad_7.png)
 
+The setup slack is 3.8957 and the hold time slack is 0.1440. Now, we make some changes to the parameters as shown in the figure and again check the report.
+
 ![](Day4/openroad_8.png)
 
-![](Day4/openroad_9.png)
+The setpu and hold time slack is increased by removing clkbuf_1.
 
+![](Day4/openroad_9.png)
 
 ![](Day4/slack_last.png)
 
