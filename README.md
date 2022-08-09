@@ -4,6 +4,14 @@ This repository contains all the steps performed in 5-day Advanced-Physica-Desig
 
 # Table of Contents
 
+- [Day 1 - Exploring Open-source Tools, OpenLANE Flow and Sky130 Pdk](#day-1---exploring-open-source-tools--openlane-flow-and-sky130-pdk)
+  * [Open source PDK structure](#open-source-pdk-structure)
+  * [Initalizing OpenLANE](#initalizing-openlane)
+  * [Design synthesis](#design-synthesis)
+- [Day 2 Floorplan and Introduction to library cell](#day-2-floorplan-and-introduction-to-library-cell)
+  * [Floorplan using OpenLANE](#floorplan-using-openlane)
+  * [Floorplan Layout in Magic](#floorplan-layout-in-magic)
+
 # Day 1 - Exploring Open-source Tools, OpenLANE Flow and Sky130 Pdk
 
 ## Open source PDK structure
