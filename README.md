@@ -338,6 +338,7 @@ We need to configure specific verilog file, constriants, clock period and other 
 
 ![](Day4/presta.png)
 
+If we want to invoke OpenSTA from outside of OpenLANE flow, we also need to configure *SDC* file(`my_base.sdc` in this case).
 ![](Day4/mybase.png)
 
 We can obtain various timing information using OpenSTA tool such as hold time, setup time, total negative slack and worst negative slack. We obtain the following information by invoking OpenSTA using the command specified above. The figure shows negative setup slack which violates our design. We try to improve the slack by replacing nets with higher delays and fanout. 
