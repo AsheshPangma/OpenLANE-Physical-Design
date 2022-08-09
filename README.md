@@ -262,17 +262,22 @@ Then, use the following command to create a *sky130_vsdinv.mag* file:
 
 Now, open magic with the above given *sky130_vsdinv.mag* file and create *LEF* file by using the command below:
 
-'lef write'
+`lef write`
 
 This creates a *LEF* file with the same name as the *MAG* file. This is shown by the figure below.
 
 ![](Day4/mag_lef.png)
 
- Spice extraction             |  Inverter scale
+![](Day4/conf_tcl_4.png)
+
+
+
+ Area information           |  Cell information
 :----------------------------:|:-------------------------:
 ![](Day4/info_area.png)       |  ![](Day4/info_cell.png)
 
- Spice extraction             |  Inverter scale
+
+ Merged.lef File with Inverter            |  Placement with Inverter
 :----------------------------:|:-------------------------:
 ![](Day4/merged_lef.png)      |  ![](Day4/placement_inv.png)
 
