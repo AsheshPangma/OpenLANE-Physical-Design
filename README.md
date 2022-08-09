@@ -11,6 +11,16 @@ This repository contains all the steps performed in 5-day Advanced-Physica-Desig
 - [Day 2 Floorplan and Introduction to library cell](#day-2-floorplan-and-introduction-to-library-cell)
   * [Floorplan using OpenLANE](#floorplan-using-openlane)
   * [Floorplan Layout in Magic](#floorplan-layout-in-magic)
+  * [Placement](#placement)
+  * [Placement using OpenLANE](#placement-using-openlane)
+  * [Placement Layout in Magic](#placement-layout-in-magic)
+- [Day 3 Design Library Cell using Magic Layout and ngspice characterization](#day-3-design-library-cell-using-magic-layout-and-ngspice-characterization)
+  * [CMOS inverter using Magic](#cmos-inverter-using-magic)
+  * [Extracting SPICE netlist from standard cell layout](#extracting-spice-netlist-from-standard-cell-layout)
+  * [Transient analysis using NGSPICE](#transient-analysis-using-ngspice)
+- [Day 4 Pre-Layout Timing Analysis and Importance of Good Clock Tree](#day-4-pre-layout-timing-analysis-and-importance-of-good-clock-tree)
+- [Day 5  Final steps for RTL2GDS](#day-5--final-steps-for-rtl2gds)
+  * [Generation of Power Distribution network](#generation-of-power-distribution-network)
 
 # Day 1 - Exploring Open-source Tools, OpenLANE Flow and Sky130 Pdk
 
@@ -131,7 +141,7 @@ run_placement
 
 `set ::env(FP_IO_MODE) 2`
 
-Placement layout with IO mode 2 |  Zoomed in figure
+Placement layout with FP_IO_MODE 2 |  Zoomed in figure
 :-------------------------:|:-------------------------:
 ![](Day2/placement_FPIOMODE_2.png)  |  ![](Day2/placement_FPIOMODE_2_2.png)
 
@@ -162,7 +172,7 @@ To view the inverter layout in Magic, we first copied the sky130A.tech file to o
 
 ![](Day3/inv_layout.png)
 
-### Extractiong SPICE netlist from standard cell layout
+### Extracting SPICE netlist from standard cell layout
 
 `extract all`
 
@@ -198,8 +208,6 @@ The following timing values are obtained from the plot at different values of in
 ![](Day3/timing_values.png)
 
 # Day 4 Pre-Layout Timing Analysis and Importance of Good Clock Tree
-
-
 
 ```
 <layer-name> <X-or-Y> <track-offset> <track-pitch>
