@@ -1,6 +1,6 @@
 # Advanced-Physical-Design-using-openLANE/Sky130
 
-This repository contains all the steps performed in 5-day Advanced-Physica-Design-using-openLANE/Sky130 workshop. This workshop is focused in complete RTL2GDS flow using openLANE flow which is open source flow. In this workshop, PICORV32A RISC V core design is used.
+This repository contains all the steps performed in 5-day Advanced-Physica-Design-using-openLANE/Sky130 workshop. This workshop is focused in complete RTL to GDSII flow using openLANE flow which is open source flow. In this workshop, PICORV32A RISC V core design is used.
 
 # Table of Contents
 
@@ -32,6 +32,8 @@ This repository contains all the steps performed in 5-day Advanced-Physica-Desig
 # Day 1 - Exploring Open-source Tools, OpenLANE Flow and Sky130 Pdk
 
 ## Open source PDK structure
+
+Sky130A open source PDK is used in this project. 
 
 ![](Day1/pdk_dir_structure.png)
 
