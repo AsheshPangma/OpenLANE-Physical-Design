@@ -1,6 +1,6 @@
 # Advanced-Physical-Design-using-openLANE/Sky130
 
-This repository contains all the steps performed in 5-day Advanced-Physica-Design-using-openLANE/Sky130 workshop held under VLSI System Design This workshop is focused in complete RTL to GDSII flow using openLANE flow which is open source flow. In this workshop, PICORV32A RISC V core design is used.
+This repository contains all the steps performed in 5-day Advanced-Physica-Design-using-openLANE/Sky130 workshop held under VLSI System Design. This workshop is focused in complete RTL to GDSII flow using openLANE flow which is open source flow. In this workshop, PICORV32A RISC V core design is used.
 
 # Table of Contents
 
